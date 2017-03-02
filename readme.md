@@ -41,6 +41,6 @@ Leia sobre a [Descrição da vaga](/job-description.md)
 
 ## Dúvidas?
 
-Ficou com alguma dúvida sobre como irá funcionar o processo? Abra uma [issue](https://github.com/lojaskd/frontend-challenge/issues/new) ou mande um email para: ti@lojaskd.com.br e nós te ajudaremos com o processo.
+Ficou com alguma dúvida sobre como irá funcionar o processo? Abra uma [issue](https://github.com/lojaskd/frontend-challenge/issues/new) ou mande um email para: frontend@lojaskd.com.br e nós te ajudaremos com o processo.
 
 Boa sorte! :metal:
