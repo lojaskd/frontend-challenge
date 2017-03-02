@@ -19,7 +19,7 @@ Leia sobre a [Descrição da vaga](/job-description.md)
 
 1. Faça um fork do projeto para sua conta pessoal;
 2. Crie uma branch com o padrão: `frontend-challenge/candidates`;
-3. Implemente o HTML/CSS/JS utilizado como base os [layouts](/_assets/layouts) disponibilizados no projeto;
+3. Implemente o HTML/CSS/JS utilizado como base os [layouts](/layouts) disponibilizados no projeto;
 4. Coloque seu teste dentro do diretório **[/candidates](/candidates)**
 5. Submeta seu código criando um [Pull Request](https://github.com/lojaskd/frontend-challenge/compare/frontend-challenge/candidates?expand=1) para a branch `frontend-challenge/candidates`
 
