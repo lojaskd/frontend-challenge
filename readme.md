@@ -29,7 +29,8 @@ Leia sobre a [Descrição da vaga](/job-description.md)
 - Utilizar qualquer template engine de sua preferência;
 - Utilizar um task runner de sua preferência;
 - Utilizar qualquer pré-processador de sua preferência;
-- Utilizar bibliotecas css como compass, bourbon, animatecss ou outras;
+- Utilizar quaisquer bibliotecas ou frameworks JS como Angular, React, jQuery, VueJS ou outras;
+- Utilizar bibliotecas CSS como Compass, Bourbon, Animatecss ou outras;
 - Utilizar ES6/7, CSS3/4, HTML5/5.1;
 
 ## Você não pode
