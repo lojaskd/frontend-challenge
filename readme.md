@@ -13,7 +13,7 @@ Leia sobre a [Descrição da vaga](/job-description.md)
 - Organização e estrutura do projeto
 - Código HTML, CSS e Javascript
 - Conhecimento de frameworks e bibliotecas utilizadas
-- Boas práticas com o código (lint, identação, etc)
+- Boas práticas com o código (lint, indentação, etc)
 
 ## Instruções
 
