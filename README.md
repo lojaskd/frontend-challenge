@@ -1,3 +1,3 @@
-# Front-end test
+# Front-end Challenge
 
-> Teste para vaga de Front-end CLT - LojasKD :metal:
+> Desafio para vaga de Front-end CLT - LojasKD :metal:
