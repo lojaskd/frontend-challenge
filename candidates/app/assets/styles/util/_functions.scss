@@ -1,0 +1,25 @@
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {clear: both;}
+  *zoom: 1;
+}
+
+.clearfix{@include clearfix();}
+
+//gerar font-size em PX e em REM
+@mixin font-size($sizeValue) {
+  font-size: $sizeValue;
+  font-size: #{$sizeValue / $font-size-base}rem;
+}
+
+//box-sizing
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model; // Safari <= 5
+     -moz-box-sizing: $box-model; // Firefox <= 19
+          box-sizing: $box-model;
+}

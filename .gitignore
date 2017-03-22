@@ -2,6 +2,7 @@
 logs
 *.log
 npm-debug.log*
+npm-error.log*
 yarn-debug.log*
 yarn-error.log*
 
@@ -58,3 +59,10 @@ typings/
 .env
 
 .sass-cache
+
+.DS_Store
+Thumbs.db
+
+dist/
+.tmp
+null/

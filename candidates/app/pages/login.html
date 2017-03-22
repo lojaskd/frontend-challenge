@@ -1,0 +1,34 @@
+---
+title: Login - Lojas KD
+description: Faça seu login e ecompanhe seu pedido na Lojas KD.
+bodyClass: login
+---
+
+{{> header-secondary }}
+
+<main class="main">
+  <div class="g-container">
+    <section class="g-column group-form u-center">
+      <div class="content-column clearfix">
+        <h1 class="title h3 u-color-blue">Acompanhar pedido</h1>
+        <form action="#" method="post" class="c-form c-form--login">
+          <div class="form-field">
+            <label for="order" class="hover">Número do pedido <span class="u-color-red">*</span> <span class="field-validation-error">Não pode ficar em branco.</span></label>
+            <input id="order" name="order" type="number">
+          </div>
+
+          <div class="form-field">
+            <label for="user">CPF ou CNPJ <span class="u-color-red">*</span> <span class="field-validation-error">Não pode ficar em branco.</span></label>
+            <input id="user" name="user" type="text" class="trigger-mask-cpf-cnpj" maxlength="18">
+          </div>
+
+          <button type="button" class="btn btn-primary btn-block u-margin-top trigger-form-login" title="Acompanhar pedido">Acompanhar</button>
+        </form>
+
+        <div class="u-text-center u-margin-bottom">
+          <a href="https://www.lojaskd.com.br" target="_blank"><small>LojasKD.com.br</small></a>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>

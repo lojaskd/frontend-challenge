@@ -1,0 +1,93 @@
+/* =============VARIABLES============= */
+
+
+/* =============MIXINS============= */
+
+
+/* =============SELECTORS============= */
+input{
+  border: 0;
+  border-bottom: 2px solid $color-gray-lighter;
+}
+
+.c-form{
+  .form-field{
+    width: 100%;
+    margin-bottom: 25px;
+    position: relative;
+
+    & > input,
+    & > label{
+      width: 100%;
+      padding: 8px 0;
+    }
+
+    & > label{
+      top: 0;
+      left: 0;
+      position: absolute;
+    }
+
+    &.form-field-error{
+      & > input{
+        border-color: $color-red;
+      }
+
+      .field-validation-error{
+        display: block;
+      }
+    }
+
+    &.form-field-hover{
+      & > label{
+        top: -20px;
+        color: $color-blue;
+        @include font-size(11px);
+      }
+    }
+
+    &.form-field-success{
+      & > label{
+        color: $color-green;
+      }
+
+      & > input{
+        border-color: $color-green;
+      }
+    }
+
+    .field-validation-error{
+      padding: 3px 10px 4px;
+      color: #fff;
+      background-color: $color-red;
+      border-radius: 4px;
+      position: absolute;
+      z-index: 10;
+      left: 80px;
+      bottom: -15px;
+      display: none;
+      @include font-size(10px);
+
+      &:before{
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 0; 
+        height: 0;
+        position: absolute;
+        border-right: 15px solid transparent;
+        border-left: 0px solid transparent;
+        border-bottom: 10px solid $color-red;
+        top: -7px;
+        left: 0;
+      }
+    }
+  }
+}
+
+/* =============CUSTOM============= */
+.c-form--login{
+  padding: $gutter;
+}
+
+/* =============MEDIA QUERY============= */
