@@ -1,0 +1,93 @@
+/* =============VARIABLES============= */
+
+
+/* =============MIXINS============= */
+
+
+/* =============SELECTORS============= */
+.c-dialog{
+  margin-top: $gutter * 3;
+  color: #fff;
+  background-color: $color-blue-light;
+  font-family: $fonts-secondary;
+  position: relative;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(4,4,5,.30);
+  @include clearfix();
+
+  &:before{
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 0; 
+    height: 0;
+    position: absolute;
+  }
+
+  &.c-dialog--top-left{
+    &:before{
+      border-right: 30px solid transparent;
+      border-left: 0px solid transparent;
+      border-bottom: 20px solid $color-blue-light;
+      top: -15px;
+      left: 0;
+    }
+  }
+
+  &.c-dialog--top-right{
+    &:before{
+      border-left: 30px solid transparent;
+      border-right: 0px solid transparent;
+      border-bottom: 20px solid $color-blue-light;
+      top: -15px;
+      right: 0;
+    }
+  }
+
+  &.c-dialog--bottom-left{
+    &:before{
+      border-right: 30px solid transparent;
+      border-left: 0px solid transparent;
+      border-top: 20px solid $color-blue-light;
+      bottom: -15px;
+      left: 0;
+    }
+  }
+
+  &.c-dialog--bottom-right{
+    &:before{
+      border-left: 30px solid transparent;
+      border-right: 0px solid transparent;
+      border-top: 20px solid $color-blue-light;
+      bottom: -15px;
+      right: 0;
+    }
+  }
+
+  .c-dialog--icon{
+    width: 20%;
+    padding: 0 20px;
+    min-height: 120px;
+    text-align: right;
+    float: left;
+    background-color: $color-blue;
+    border-radius: 4px 0 0 4px;
+
+    i{
+      margin-top: 45px;
+      vertical-align: middle;
+    }
+  }
+
+  .c-dialog--info{
+    width: 80%;
+    padding: 30px 20px;
+    margin: 0;
+    float: right;
+  }
+}
+
+/* =============CUSTOM============= */
+
+
+/* =============MEDIA QUERY============= */

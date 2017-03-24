@@ -1,0 +1,52 @@
+/* =============VARIABLES============= */
+
+
+/* =============MIXINS============= */
+
+
+/* =============SELECTORS============= */
+.c-tooltip{
+  position: relative;
+
+  &:hover{
+    & > span{
+      display: block;
+    }
+  }
+
+  & > span{
+    min-width: 150px;
+    //content: "";
+    padding: 5px 10px;
+    color: $color-base;
+    background-color: $color-gray-lighter;
+    display: inline-block;
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+    text-indent: 0;
+    @include font-size(10px);
+    display: none;
+    border-radius: 4px;
+    border: 2px solid #fff;
+
+    &:before{
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      width: 0; 
+      height: 0;
+      position: absolute;
+      border-left: 15px solid transparent;
+      border-right: 0px solid transparent;
+      border-top: 10px solid $color-gray-lighter;
+      bottom: -8px;
+      right: 0;
+    }
+  }
+}
+
+/* =============CUSTOM============= */
+
+
+/* =============MEDIA QUERY============= */

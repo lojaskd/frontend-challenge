@@ -1,0 +1,102 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-arrow {
+  background-image: url(../images/icons.png);
+  background-position: -147px -77px;
+  width: 10px;
+  height: 5px;
+}
+.icon-check {
+  background-image: url(../images/icons.png);
+  background-position: -135px -50px;
+  width: 27px;
+  height: 27px;
+}
+.icon-dialog {
+  background-image: url(../images/icons.png);
+  background-position: -45px -95px;
+  width: 29px;
+  height: 29px;
+}
+.icon-info-hover {
+  background-image: url(../images/icons.png);
+  background-position: 0px -140px;
+  width: 20px;
+  height: 20px;
+}
+.icon-info {
+  background-image: url(../images/icons.png);
+  background-position: -128px -95px;
+  width: 20px;
+  height: 20px;
+}
+.icon-link {
+  background-image: url(../images/icons.png);
+  background-position: -135px -77px;
+  width: 12px;
+  height: 12px;
+}
+.icon-logo {
+  background-image: url(../images/icons.png);
+  background-position: 0px 0px;
+  width: 162px;
+  height: 50px;
+}
+.icon-menu-mobile {
+  background-image: url(../images/icons.png);
+  background-position: -162px 0px;
+  width: 7px;
+  height: 26px;
+}
+.icon-no-check {
+  background-image: url(../images/icons.png);
+  background-position: -74px -95px;
+  width: 27px;
+  height: 27px;
+}
+.icon-step-1 {
+  background-image: url(../images/icons.png);
+  background-position: -90px -50px;
+  width: 45px;
+  height: 45px;
+}
+.icon-step-2 {
+  background-image: url(../images/icons.png);
+  background-position: -45px -50px;
+  width: 45px;
+  height: 45px;
+}
+.icon-step-3 {
+  background-image: url(../images/icons.png);
+  background-position: 0px -50px;
+  width: 45px;
+  height: 45px;
+}
+.icon-step-4 {
+  background-image: url(../images/icons.png);
+  background-position: 0px -95px;
+  width: 45px;
+  height: 45px;
+}
+.icon-waiting {
+  background-image: url(../images/icons.png);
+  background-position: -101px -95px;
+  width: 27px;
+  height: 27px;
+}

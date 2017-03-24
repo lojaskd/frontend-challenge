@@ -1,0 +1,20 @@
+/* =============VARIABLES============= */
+
+
+/* =============MIXINS============= */
+
+
+/* =============SELECTORS============= */
+.footer{
+  padding-bottom: $gutter;
+  text-align: center;
+
+  .logo{
+    margin: $gutter * 3 0 $gutter;
+  }
+}
+
+/* =============CUSTOM============= */
+
+
+/* =============MEDIA QUERY============= */

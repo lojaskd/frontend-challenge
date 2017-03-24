@@ -1,0 +1,94 @@
+// /* =============VARIABLES============= */
+$container-gutters: $gutter * 2;
+$columns-amount: 12;
+$column-width: 70px;
+
+
+/* =============MIXINS============= */
+
+//Retorna um valor em pixel da quantidade de colunas definida (calculando os espaçamentos entre colunas)
+//O 2º paramentro serve para personalizar o valor final, para considerar um padding interno ou para incrementar ou descrecer uma unidade para criar breakpoints
+@function grid-px($cols: 2, $edit: 0) {
+  @return ($column-width * $cols) + (($gutter * 2) * ($cols - 1)) + $edit;
+}
+
+
+//Valor para a media query considerando os gutters do g-container
+//O 1º parametro é a quantidade de colunas baseadas no layout
+//O 2º paremetro é um valor para personalizar o resultado final
+@function bp($cols: 2, $edit: 0) {
+  @return ($column-width * $cols) + (($gutter * 2) * ($cols - 1)) + $edit + $container-gutters;
+}
+
+
+//Mixin para criar pilhas de colunas com espaçamentos fixos
+@mixin columns($cols: 2) {
+  $gutter: $gutter * 2;
+
+  float:left;
+  width:100% / $cols - 2%;
+  width:calc((100% - (#{$gutter} * (#{$cols} - 1))) / #{$cols});
+  margin-right:$gutter;
+  //margin-bottom:$gutter;
+
+  //Retira a margem direita do ultimo item de cada linha
+  &:nth-child(#{$cols}n+#{$cols}) {
+    margin-right:0;
+  }
+
+  //Adiciona um clear no primeiro item de cada linha, menos o da primeira linha
+  &:nth-child(#{$cols}n+#{$cols + 1}) {
+    clear:left;
+  }
+
+  //Retira a margem inferior dos ultimos itens do conjunto
+  @for $i from 1 through $cols {
+    &:nth-last-child(#{$i}) {
+      margin-bottom:0;
+    }
+  }
+}
+
+// =============================================================================
+// GRIDS
+// =============================================================================
+
+//largura maxima dos containers do site
+$max-container: grid-px(12);
+
+
+// =============================================================================
+.g-clearfix {
+  @include clearfix();
+}
+
+//envolucro principal do site
+.g-wrapper {
+  margin-top:0 !important;
+  max-width:100%;
+  min-height:100%;
+  overflow:hidden;
+}
+
+//limitador da largura maxima do site
+.g-container {
+  @include clearfix();
+  position:relative;
+  margin:0 auto;
+  max-width:$max-container;
+  width:94%;
+  width:calc(100% - #{$container-gutters});
+}
+
+// column
+.g-column {
+  float:left;
+
+  .content-column{
+    padding: $gutter;
+    background-color: #fff;
+    border-radius: 4px;
+    border-bottom: 5px solid $color-yellow;
+    box-shadow: 0 0 8px rgba(4,4,5,.10);
+  }
+}
