@@ -1,0 +1,29 @@
+body
+	min-height: 100vh
+	margin: 0
+	font-family: 'Lato', sans-serif;
+	background: $yellow;
+	background: -moz-linear-gradient(top,  $yellow 5px, $blue 5px, $blue 200px, $gray 200px);
+	background: -webkit-linear-gradient(top,  $yellow 5px,$blue 5px,$blue 200px,$gray 200px);
+	background: linear-gradient(to bottom,  $yellow 5px,$blue 5px,$blue 200px,$gray 200px);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$yellow, endColorstr=$gray,GradientType=0 );
+	&.inverse
+		background: $gray;
+		background: -moz-linear-gradient(top,  $gray 200px, $blue 200px)
+		background: -webkit-linear-gradient(top,  $gray 200px,$blue 200px)
+		background: linear-gradient(to bottom,  $gray 200px,$blue 200px)
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$gray, endColorstr=$blue,GradientType=0 )
+header
+	nav
+		background-color: transparent
+		box-shadow: none
+		.brand-logo
+			margin: 0
+			font-size: 1.2em
+			line-height: 1.2em
+			padding: 20px 0 0
+footer
+	text-align: center
+	figure
+		margin: 0
+		display: inline-block
