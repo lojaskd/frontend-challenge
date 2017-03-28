@@ -1,0 +1,38 @@
+.pg-login{
+  padding-bottom: 50px;
+
+  .header{
+    padding-top: 30px;
+    text-align: center;
+    border-top: 30px solid $color-yellow;
+    background-color: $color-gray-lighter;
+  }
+
+  .group-form{
+    width: $column-width * 4 + $gutter * 4;
+    margin-top: -90px;
+    float: none;
+
+    .title{
+      width: 100%;
+      padding: 5px 0 0 $gutter;
+      margin: $gutter * 2 0 $gutter;
+      border-left: 3px solid $color-blue;
+      font-family: $fonts-secondary;
+      @include font-size(22px);
+    }
+  }
+
+  .content-column{
+    padding: 0;
+    border: 0;
+  }
+}
+
+@media all and (max-width: bp(4)) {
+  .pg-login{
+    .group-form{
+      width: 100%;
+    }
+  }
+}

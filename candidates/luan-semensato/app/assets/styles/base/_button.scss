@@ -1,0 +1,25 @@
+// ============================================================================
+// BUTTONS
+// ============================================================================
+
+.btn{
+  padding: 12px $gutter;
+  border-radius: 4px;
+  border: 0;
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(4,4,5,.10);
+
+  &.btn-primary{
+    color: #fff;
+    background-color: $color-blue;
+
+    &:hover{
+      background-color: $color-blue-light;
+    }
+  }
+
+  &.btn-block{
+    width: 100%;
+  }
+}

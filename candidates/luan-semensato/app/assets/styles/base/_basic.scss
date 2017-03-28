@@ -1,0 +1,33 @@
+// Reset the box-sizing
+*,
+*:before,
+*:after {
+  @include box-sizing(border-box);
+}
+
+body {
+  font-family: $fonts-base;
+  font-size: $font-size-base;
+  color: $color-base;
+  background-color: $color-gray-lighter;
+
+  &.pg-login{
+    background-color: $color-blue;
+  }  
+}
+
+a{
+  color: $color-blue;
+
+  &:hover{
+    color: $color-blue-light;
+  }
+
+  &.no-underline {
+    text-decoration: none;
+  }
+}
+
+:focus {
+  outline: 0;
+}

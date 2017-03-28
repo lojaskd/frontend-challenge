@@ -1,0 +1,17 @@
+// =============================================================================
+// SPRITES
+// =============================================================================
+
+// @import "../images/icons/*.png";
+// @include all-sprites-icons;
+// $icons-sprite-dimensions: true;
+
+// .asdas{
+//   @include sprites-sprite("star-v5");
+// }
+
+[class^="icon-"], [class*=" icon-"]{
+  display: inline-block;
+  vertical-align: middle;
+  text-indent: -99999px;
+}

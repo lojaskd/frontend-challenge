@@ -1,0 +1,42 @@
+/* =============VARIABLES============= */
+
+
+/* =============MIXINS============= */
+
+
+/* =============SELECTORS============= */
+.header{
+  height: 200px;
+  padding: 20px 0;
+  background-color: $color-blue;
+  border-top: 4px solid $color-yellow;
+  color: #fff;
+
+  .nav{
+    font-family: $fonts-secondary;
+    list-style: none;
+
+    a{
+      margin-left: 20px;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+
+/* =============CUSTOM============= */
+.pg-login{
+  .header{
+    height: 240px;
+  }
+}
+
+
+/* =============MEDIA QUERY============= */
+@media all and (max-width: bp(9)) {
+  .header{
+    .nav{
+      display: none;
+    }
+  }
+}
