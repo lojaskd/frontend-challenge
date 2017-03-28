@@ -1,64 +1,86 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
-                <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ route('login') }}">
-                        {{ csrf_field() }}
+@extends('base')
 
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+@section('title', 'Acompanhar pdido | Login')
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+@section('bodyClass', 'inverse')
+@section('content')
+	<main class="container">
+		<div class="row">
+			<div class="col s12 m4 offset-m4">
+				<article class="card">
+					<div class="card-content">
+						<h2 class="card-title">Acompanhar pedido</h2>
+						<form id='acompanhar' action="">
+							<div class="input-field">
+								<input id="orderNumber" name="orderNumber" type="text" required>
+								<label for="orderNumber">Número do pedido</label>
+							</div>
+							<div class="input-field">
+								<input id="cpfCnpj" name="cpfCnpj" type="text" required>
+								<label for="cpfCnpj">CPF ou CNPJ</label>
+							</div>
+							<div class="input-field">
+								<button class="btn" type="submit" name="action">Acompanhar</button>
+							</div>
+						</form>
+						<footer class="center-align">
+							<a href="http://www.lojaskd.com.br">LojasKD.com.br</a>
+						</footer>
+					</div>
+				</article>
+			</div>
+		</div>
+	</main>
+@endsection
+@section('extra-scripts')
+	<script>
+		jQuery.validator.addMethod("cpfCnpjLength", function(value, element, param) {
+			return this.optional(element) || value.length == param[0] || value.length == param[1];
+		}, "mensagem qualquer");
 
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+		$(document).ready(function(){
+			$('#acompanhar').validate({
+				errorPlacement: function(error, element) {
+					error.insertAfter( element.parent());
+				},
+				rules: {
+					orderNumber: {
+						required: true,
+						number: true
+					},
+					cpfCnpj: {
+						required: true,
+						cpfCnpjLength: [14, 18]
+					}
+				},
+				messages: {
+					orderNumber: {
+						required: 'Esse campo não pode ficar em branco',
+						number: 'Por favor, insira somente números'
+					},
+					cpfCnpj: {
+						required: 'Esse campo não pode ficar em branco',
+						cpfCnpjLength: 'Este campo deve conter 11 (CPF) ou 14 (CNPJ) dígitos',
+					}
+				},
+				submitHandler: function(form) {
+					form.submit();
+				},
+			});
 
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Login
-                                </button>
-
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    Forgot Your Password?
-                                </a>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+			$('#cpfCnpj').mask('00000-000', {
+				onKeyPress: function(cpfCnpj, e, field, options){
+					var masks = ['000.000.000-00Z', '00.000.000/0000-00'];
+					mask = (cpfCnpj.length < 15) ? masks[0] : masks[1];
+					$('#cpfCnpj').mask(mask, options);
+				},
+			    translation: {
+    				'Z': {
+						pattern: /[0-9]/,
+						optional: true
+					}
+				}
+			});
+		});
+	</script>
+@endsection

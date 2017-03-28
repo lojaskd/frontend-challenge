@@ -9,11 +9,13 @@ body
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$yellow, endColorstr=$gray,GradientType=0 );
 	&.inverse
 		background: $gray;
-		background: -moz-linear-gradient(top,  $gray 200px, $blue 200px)
-		background: -webkit-linear-gradient(top,  $gray 200px,$blue 200px)
-		background: linear-gradient(to bottom,  $gray 200px,$blue 200px)
+		background: -moz-linear-gradient(top,  $yellow 30px, $gray 30px, $gray 200px, $blue 200px)
+		background: -webkit-linear-gradient(top,  $yellow 30px, $gray 30px, $gray 200px,$blue 200px)
+		background: linear-gradient(to bottom,  $yellow 30px, $gray 30px, $gray 200px,$blue 200px)
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$gray, endColorstr=$blue,GradientType=0 )
 header
+	#login-logo
+		margin-top: 60px
 	nav
 		background-color: transparent
 		box-shadow: none
@@ -22,7 +24,7 @@ header
 			font-size: 1.2em
 			line-height: 1.2em
 			padding: 20px 0 0
-footer
+footer, #login-logo
 	text-align: center
 figure
 	margin: 0
@@ -30,3 +32,7 @@ figure
 img
 	width: 100%;
 	height: auto;
+
+article
+	&.card footer
+		margin-top: 1rem
