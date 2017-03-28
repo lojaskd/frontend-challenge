@@ -5,9 +5,9 @@
 @section('content')
 	<main class="container">
 		<div class="row">
-			@include('user.cards.orders.details')
+			@include('user.cards.orders.details', ['order' => $order])
 			@include('user.cards.orders.status')
-			@include('user.cards.orders.products')
+			@include('user.cards.orders.products', ['products' => $order['products']])
 		</div>
 	</main>
 @endsection

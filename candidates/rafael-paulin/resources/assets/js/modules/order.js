@@ -17,8 +17,8 @@ $(document).ready(function(){
 
 	$('.timeline-horizontal li').on('click', function(){
 		if(!$(this).hasClass('active'))
-			$('.timeline-horizontal li').outerHeight(45 + $(this).children('.collapsible-body').outerHeight());
+			$(this).outerHeight(45 + $(this).children('.collapsible-body').outerHeight());
 		else
-			$('.timeline-horizontal li').css('height', 'auto')
+			$(this).css('height', 'auto')
 	})
 });

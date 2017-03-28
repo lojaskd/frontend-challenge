@@ -9929,7 +9929,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 	});
 
 	$('.timeline-horizontal li').on('click', function () {
-		if (!$(this).hasClass('active')) $('.timeline-horizontal li').outerHeight(45 + $(this).children('.collapsible-body').outerHeight());else $('.timeline-horizontal li').css('height', 'auto');
+		if (!$(this).hasClass('active')) $(this).outerHeight(45 + $(this).children('.collapsible-body').outerHeight());else $(this).css('height', 'auto');
 	});
 });
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
