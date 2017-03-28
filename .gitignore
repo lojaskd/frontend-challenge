@@ -59,4 +59,9 @@ typings/
 
 .sass-cache
 
-*.db
+.DS_Store
+Thumbs.db
+
+dist/
+.tmp
+null/

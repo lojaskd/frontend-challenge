@@ -9914,8 +9914,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {$(document).ready(function () {
-	$('#itensStatus').on('click', function () {
-		if (!$(this).hasClass('active')) $(this).children('i.fa').removeClass('fa-caret-right').addClass('fa-caret-down');else $(this).children('i.fa').removeClass('fa-caret-down').addClass('fa-caret-right');
+	$('#itensStatus').on('click', 'li', function () {
+		if ($(this).hasClass('active')) $(this).find('i.fa').removeClass('fa-caret-right').addClass('fa-caret-down');else $(this).find('i.fa').removeClass('fa-caret-down').addClass('fa-caret-right');
 	});
 
 	$('.timeline-vertical dd').each(function (i, e) {

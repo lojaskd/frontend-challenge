@@ -1,0 +1,1 @@
+# Teste para Front End Dev da LojasKD

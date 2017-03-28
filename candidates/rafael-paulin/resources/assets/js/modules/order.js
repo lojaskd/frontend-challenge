@@ -1,9 +1,9 @@
 $(document).ready(function(){
-	$('#itensStatus').on('click', function(){
-		if( !$(this).hasClass('active') )
-			$(this).children('i.fa').removeClass('fa-caret-right').addClass('fa-caret-down');
+	$('#itensStatus').on('click', 'li', function(){
+		if( $(this).hasClass('active') )
+			$(this).find('i.fa').removeClass('fa-caret-right').addClass('fa-caret-down');
 		else
-			$(this).children('i.fa').removeClass('fa-caret-down').addClass('fa-caret-right');
+			$(this).find('i.fa').removeClass('fa-caret-down').addClass('fa-caret-right');
 	});
 
 	$('.timeline-vertical dd').each(function(i, e){
