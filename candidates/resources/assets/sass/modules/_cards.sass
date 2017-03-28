@@ -1,5 +1,6 @@
 .card
 	color: darken($gray, 45%)
+	border-bottom: 5px solid $yellow
 	.card-title, .subtitle
 		color: darken($gray, 10%)
 		font-size: 1em
@@ -29,12 +30,13 @@
 				text-align: inherit
 				margin: 0 0 0 20px
 		.collapsible-body
-			background: $gray
 			border: none!important
 			margin: 0!important
-			padding: 5px 10px!important
+			padding: 0!important
+			&.grayBox
+				padding: 5px 10px!important
+				background: $gray
 			.prodStatus
 				color: $blue
 				display: inline-block
 				width: 100%
-	border-bottom: 5px solid $yellow

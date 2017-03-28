@@ -5,14 +5,14 @@
 			<h4 class="subtitle">Status Atual</h4>
 			<span class="data text-success">Acompanhando seus móveis</span>
 			<h4 class="subtitle">Nº do pedido</h4>
-			<span class="data">11225589</span>
+			<span class="data">{{$id}}</span>
 			<h4 class="subtitle">Produtos</h4>
 			<ul class="collapsible" data-collapsible="accordion">
 				<li>
 					<div class="collapsible-header">
 						<span class="data">12</span> <i class="fa fa-caret-right" aria-hidden="true"></i>
 					</div>
-					<div class="collapsible-body">
+					<div class="collapsible-body grayBox">
 						<span class="prodStatus">1 item enviado p/ fábrica</span>
 						<span class="prodStatus">5 itens em produção</span>
 						<span class="prodStatus">3 itens com a transportadora</span>
