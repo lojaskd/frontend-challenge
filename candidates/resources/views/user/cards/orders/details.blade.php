@@ -1,4 +1,4 @@
-<div class="col m3">
+<div class="col s12 m3">
 	<article class="card">
 		<div class="card-content">
 			<h3 class="card-title">Detalhes do pedido</h3>
@@ -7,7 +7,7 @@
 			<h4 class="subtitle">Nº do pedido</h4>
 			<span class="data">{{$id}}</span>
 			<h4 class="subtitle">Produtos</h4>
-			<ul class="collapsible" data-collapsible="accordion">
+			<ul id="itensStatus"class="collapsible" data-collapsible="accordion">
 				<li>
 					<div class="collapsible-header">
 						<span class="data">12</span> <i class="fa fa-caret-right" aria-hidden="true"></i>

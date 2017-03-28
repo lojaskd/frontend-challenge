@@ -1,8 +1,8 @@
-<div class="col m4">
-	<div class="card">
+<div class="col s12 m4">
+	<article class="card">
 		<div class="card-content">
 			<h3 class="card-title">Andamento do pedido</h3>
-			<dl class="timeline-horizontal">
+			<dl class="timeline-vertical">
 				<dt class="done">
 					<time datetime="">19 jan 2017</time>
 				</dt>
@@ -64,5 +64,16 @@
 				</dd>
 			</dl>
 		</div>
-	</div>
+	</article>
+	<article class="card horizontal extra-info">
+		<div class="arrow-up"></div>
+		<div class="card-image valign-wrapper">
+			<i class="fa fa-comment-o fa-fw fa-2x valign" aria-hidden="true"></i>
+		</div>
+		<div class="card-stacked">
+			<div class="card-content valign-wrapper">
+				<p class="valign center-align">Acompanhamos cada detalhe da produção até a entrega de cada um dos seus móveis. Quer ver? Confira!</p>
+			</div>
+		</div>
+	</article>
 </div>

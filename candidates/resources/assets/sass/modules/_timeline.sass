@@ -1,4 +1,4 @@
-dl.timeline-horizontal
+dl.timeline-vertical
 	dd .collapsible-header:after, dt:after
 		font: normal normal normal 14px/1 FontAwesome
 		font-size: inherit
@@ -38,16 +38,16 @@ dl.timeline-horizontal
 			&:after
 				content: "\f129"
 				font-size: 1.15em
-				background: $blue
+				background: #fff
+				color: $blue
 				padding: 3px 13px 2px 7px
-				color: #FFF
 				right: 0
 				top: -4px
 				border: 2px solid $blue
 			&.active:after
 				padding: 3px 13px 2px 7px
-				background: #fff
-				color: $blue
+				color: #FFF
+				background: $blue
 	dt
 		width: 90px
 		float: left
@@ -77,3 +77,70 @@ dl.timeline-horizontal
 		text-transform: uppercase
 		font-weight: bold
 		font-size: 0.85em
+ul.timeline-horizontal.collapsible
+	display: flex
+	justify-content: space-between
+	margin-top: 15px
+	position: relative
+	li
+		flex-grow: 1
+		text-align: center
+		.collapsible-header
+			width: 100%
+			display: inline-block
+			position: relative
+			&:before
+				content: ""
+				position: absolute
+				border-bottom: 2px solid
+				width: 100%
+				top: 50%
+				left: -50%
+			i
+				position: relative
+				font-size: 1.5em
+				padding: 4px 9px
+				margin: 0
+				z-index: 1
+				background: #FFF
+			&.done
+				&:before
+					border-color: $blue
+				i
+					color: $blue
+					background: #FFF
+					border-color: $blue
+				&.active
+					i
+						color: #FFF
+						background: $blue
+			&.ongoing
+				&:before
+					border-color: $green
+				i
+					color: $green
+					background: #FFF
+					border-color: $green
+				&.active
+					i
+						color: #FFF
+						background: $green
+			&.disabled
+				&:before
+					border-color: $gray
+				i
+					color: $gray
+					background: #FFF
+					border-color: $gray
+				&.active
+					i
+						color: #FFF
+						background: $gray
+		&:first-child .collapsible-header:before
+			display: none
+		.collapsible-body
+			padding: 10px 0
+			position: absolute
+			left: 0
+			margin: 0
+			text-align: left
