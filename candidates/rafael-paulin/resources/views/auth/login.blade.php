@@ -10,7 +10,8 @@
 				<article class="card">
 					<div class="card-content">
 						<h2 class="card-title">Acompanhar pedido</h2>
-						<form id='acompanhar' action="">
+						<form id='acompanhar' method="POST" action="{{url('/fakelogin')}}">
+							{{ csrf_field() }}
 							<div class="input-field">
 								<input id="orderNumber" name="orderNumber" type="text" required>
 								<label for="orderNumber">Número do pedido</label>

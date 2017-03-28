@@ -9,4 +9,7 @@ class OrderController extends Controller {
     function show($id){
     	return view('user.order')->with(['id' => $id]);
     }
+    function fakeLogin(){
+    	return redirect()->route('showOrder', ['id' => $_POST['orderNumber']]);
+	}
 }
