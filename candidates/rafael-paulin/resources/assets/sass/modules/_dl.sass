@@ -1,0 +1,21 @@
+dl
+	dd
+		margin: 0
+	&.horizontal
+		dt
+			float: left
+			clear: left
+		dd
+			margin-left: 100px
+			.collapsible .collapsible-header i
+				color: $blue
+				border: 2px solid $blue
+				border-radius: 50%
+				padding: 0px 8px 0px 8px
+				margin-left: 2%
+				font-size: 1em
+			.collapsible li.active i
+				color: #FFF
+				background:  $blue
+			& .collapsible .collapsible-body
+				margin-left: -100px

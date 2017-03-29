@@ -1,0 +1,89 @@
+.card
+	section
+		small
+			text-transform: uppercase
+		header
+			float: left
+			clear: both
+			width: 100%
+			h4
+				font-size: 1em
+				margin: 0
+				max-height: 50px
+				overflow: hidden
+				width: calc(100% - 100px);
+			figure
+				width: 85px
+				margin-right: 15px
+				float: left
+				clear: both
+		border-bottom: 2px solid $gray
+		&:last-child
+			border: none
+	color: darken($gray, 45%)
+	border-bottom: 4px solid $yellow
+	position: relative
+	.card-title, .subtitle
+		color: darken($gray, 10%)
+		font-size: 1em
+		width: 100%
+	.subtitle
+		margin: 1.14rem 0 0
+	h2.card-title
+		margin: 0 0 0 -24px
+		color: $blue
+		text-transform: capitalize
+		border-left: 5px solid $blue
+		font-weight: normal
+		padding: 0 0 0 24px
+		font-size: 1.5em
+	.card-title
+		text-transform: uppercase
+		font-weight: bold
+		margin: 0 0 8px
+	.collapsible
+		border: none
+		box-shadow: none
+		margin: 0
+		.collapsible-header
+			min-height: 0
+			padding: 0
+			border: none
+			line-height: inherit
+			i
+				color: $blue
+				width: auto
+				line-height: inherit
+				display: inline-block
+				float: none
+				text-align: inherit
+				margin: 0 0 0 20px
+				font-size: inherit;
+		.collapsible-body
+			border: none
+			margin: 0
+			padding: 0
+			&.grayBox
+				padding: 5px 10px!important
+				background: $gray
+			.prodStatus
+				color: $blue
+				display: inline-block
+				width: 100%
+	&.extra-info
+		color: #FFF
+		background: lighten($blue, 15%)
+		margin-top: 30px
+		border: none
+		.card-image
+			padding: 24px;
+			background: $blue
+	.arrow-up
+		width: 0
+		height: 0
+		border-left: 30px solid transparent
+		border-right: 0px solid transparent
+		border-bottom: 20px solid #23b0fd
+		position: absolute
+		right: 0
+		top: -15px

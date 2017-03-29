@@ -1,0 +1,25 @@
+label.error
+	margin: -15px 0 0 10px;
+	display: block;
+	color: $red
+input
+	&[type="text"]
+		&.error
+			border-color: $red
+			& + label
+				color: $red
+		&.valid
+			border-color: $green;
+			& + label
+				color: $green
+		&:focus:not([readonly])
+			border-color: $blue;
+			box-shadow: 0 1px 0 0 $blue;
+			& + label
+				color: $blue;
+form
+	button.btn
+		width: 100%
+		background-color: $blue
+		&:hover
+			background-color: lighten($blue, 15%)
