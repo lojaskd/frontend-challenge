@@ -13,15 +13,17 @@ Leia sobre a [Descrição da vaga](/job-description.md)
 - Organização e estrutura do projeto
 - Código HTML, CSS e Javascript
 - Conhecimento de frameworks e bibliotecas utilizadas
-- Boas práticas com o código (lint, indentação, etc)
+- Conhecimento de automatizador de tarefas e pré-processadores
+- Boas práticas com o código (lint, indentação, padrões de classes e ID's, etc)
+- Técnica Mobile First
 
 ## Instruções
 
 1. Faça um fork do projeto para sua conta pessoal;
 2. Crie uma branch com o padrão: `frontend-challenge/candidates`;
-3. Implemente o HTML/CSS/JS utilizado como base os [layouts](/layouts) disponibilizados no projeto;
-4. Coloque seu teste dentro do diretório **[/candidates](/candidates)**
-5. Submeta seu código criando um [Pull Request](https://github.com/lojaskd/frontend-challenge/compare/frontend-challenge/candidates?expand=1) para a branch `frontend-challenge/candidates`
+3. Implemente o HTML/CSS/JS utilizado como base os [layouts](https://github.com/lojaskd/frontend-challenge/tree/frontend-challenge/candidates/layouts) disponibilizados no projeto;
+4. Coloque seu teste dentro do diretório **[/candidates](https://github.com/lojaskd/frontend-challenge/tree/frontend-challenge/candidates/candidates)**
+5. Submeta seu código criando um [Pull Request](https://github.com/lojaskd/frontend-challenge/compare/frontend-challenge/candidates?expand=1) para a branch `frontend-challenge/candidates`.
 
 ## Você pode
 
@@ -31,7 +33,7 @@ Leia sobre a [Descrição da vaga](/job-description.md)
 - Utilizar qualquer pré-processador de sua preferência;
 - Utilizar quaisquer bibliotecas ou frameworks JS como Angular, React, jQuery, VueJS ou outras;
 - Utilizar bibliotecas CSS como Compass, Bourbon, Animatecss ou outras;
-- Utilizar ES6/7, CSS3/4, HTML5/5.1;
+- Utilizar ES6/7, CSS3/4, HTML5/5.1.
 
 ## Você não pode
 
