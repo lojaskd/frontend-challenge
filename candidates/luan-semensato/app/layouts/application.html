@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title><%= typeof(title) !== 'undefined' ? title : 'Frontend Challenge - Lojas KD' %></title>
+
+  <meta name="description" content="<%= typeof(description) !== 'undefined' ? description : 'Desafio para os futuros front-enders da LojasKD.' %>">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="styles/application.css" media="all">
+  <link rel="stylesheet" href="styles/icons.css" media="all">
+</head>
+<body class="pg-<%= typeof(bodyClass) !== 'undefined' ? bodyClass : '' %>">
+  <div id="g-wrapper">
+    <%- contents %>
+  </div>
+
+  <!-- build:js scripts/application.js -->
+  <script src="scripts/vendor/jquery-3.2.0.min.js"></script>
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
+</body>
+</html>

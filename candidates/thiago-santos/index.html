@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lojas KD</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script src="javascripts/scripts.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="stylesheets/cssFonts.css">
+	<link rel="stylesheet" href="stylesheets/cssCores.css">
+	<link rel="stylesheet" href="stylesheets/cssSprite.css">
+	<link rel="stylesheet" href="stylesheets/cssSite.css">
+	<style>
+
+	</style>
+</head>
+<body class="bgLogin cor-azul-escuro-bg">
+	<header>
+		<div class="container">
+			<div class="columns">
+			  <section class="column is-4 is-offset-4">
+			  	<figure class="marcaLogin">
+			  		<img src="images/marca.png" alt="">
+			  	</figure>
+			  </section>
+		  	</div>
+		</div>
+	</header>
+
+
+	<aside class="container">
+		<div class="columns">
+		  <section class="column is-4 is-offset-4">
+		  	<div class="box">
+			  	
+				<p class="tituloForm cor-azul-escuro">Acompanhar Pedido</p>
+
+				<form id="contact-form" class="form" method="POST" role="form">
+	              <div class="form-group">
+	                  <label class="form-label" for="pedido">Número do pedido *</label>
+	                  <input type="text" class="form-control" id="pedido" name="pedido" placeholder="Número do pedido" tabindex="1" >
+	                  <div class="msg"></div>
+	              </div>                            
+	              <div class="form-group">
+	                  <label class="form-label" for="cpf">CPF ou CNPJ *</label>
+	                  <input type="text" class="form-control" id="cpf" name="cpf" placeholder="CPF ou CNPJ" tabindex="2" >
+	                  <div class="msg"></div>
+	              </div>                            
+
+	              <div class="text-center">
+	                  <button type="submit" id="bt-submit" class="btn btn-start-order">Acompanhar</button>
+	              </div>
+	        	</form>
+
+				<p class="assinatura"><a href="http://www.lojaskd.com.br" class="cor-azul-claro">LojasKD.com.br</a></p>
+		  	</div>
+		  </section>
+	  	</div>
+	</aside>
+
+</body>
+</html>

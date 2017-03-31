@@ -1,0 +1,146 @@
+dl.timeline-vertical
+	dd .collapsible-header:after, dt:after
+		font: normal normal normal 14px/1 FontAwesome
+		font-size: inherit
+		text-rendering: auto
+		border-radius: 50%
+		width: 1.28571429em
+		text-align: center
+		position: absolute
+	dd
+		margin-left: 140px
+		padding: 5px 0 0
+		font-size: 0.85em
+		color: darken($gray, 10%)
+		position: relative
+		min-height: 70px;
+		padding-bottom: 10px;
+		&:before
+			content: ' '
+			position: absolute
+			top: 27px
+			bottom: -10px
+			left: -25px
+			border-left: 2px solid
+		&:last-child:before
+			display: none
+		&.toOngoing:before
+			border-color: $green
+		&.toDone:before
+			border-color: $blue
+		h4.subtitle
+			margin: 0 0 5px 0
+			color: darken($gray, 45%)
+			font-size: 1.1em
+			width: 155px
+		.collapsible-header
+			position: relative
+			&:after
+				content: "\f129"
+				font-size: 1.15em
+				background: #fff
+				color: $blue
+				padding: 3px 13px 2px 7px
+				right: 0
+				top: -4px
+				border: 2px solid $blue
+			&.active:after
+				padding: 3px 13px 2px 7px
+				color: #FFF
+				background: $blue
+	dt
+		width: 90px
+		float: left
+		clear: left
+		text-align: right
+		position: relative
+		&:after
+			color: #FFF
+			font-size: 20px
+			left: 100px
+			top: -3px
+		&.ongoing:after
+			content: "\f017"
+			background: $green
+			padding: 5px 24px 5px 6px
+		&.done:after
+			content: "\f00c"
+			background: $blue
+			padding: 5px 25px 5px 5px
+		&.disabled:after
+			content: "\f00c"
+			color: darken($gray, 10%)
+			background: darken($gray, 10%)
+			padding: 5px 25px 5px 5px
+	time
+		color: darken($gray, 10%)
+		text-transform: uppercase
+		font-weight: bold
+		font-size: 0.85em
+ul.timeline-horizontal.collapsible
+	display: flex
+	justify-content: space-between
+	margin-top: 15px
+	position: relative
+	li
+		flex-grow: 1
+		text-align: center
+		.collapsible-header
+			width: 100%
+			display: inline-block
+			position: relative
+			&:before
+				content: ""
+				position: absolute
+				border-bottom: 2px solid
+				width: 100%
+				top: 50%
+				left: -50%
+			i
+				position: relative
+				font-size: 1.5em
+				padding: 4px 9px
+				margin: 0
+				z-index: 1
+				background: #FFF
+			&.done
+				&:before
+					border-color: $blue
+				i
+					color: $blue
+					background: #FFF
+					border-color: $blue
+				&.active
+					i
+						color: #FFF
+						background: $blue
+			&.ongoing
+				&:before
+					border-color: $green
+				i
+					color: $green
+					background: #FFF
+					border-color: $green
+				&.active
+					i
+						color: #FFF
+						background: $green
+			&.disabled
+				&:before
+					border-color: $gray
+				i
+					color: $gray
+					background: #FFF
+					border-color: $gray
+				&.active
+					i
+						color: #FFF
+						background: $gray
+		&:first-child .collapsible-header:before
+			display: none
+		.collapsible-body
+			padding: 10px 0
+			position: absolute
+			left: 0
+			margin: 0
+			text-align: left
